@@ -1,23 +1,26 @@
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-const db = require('./queries')
-const port = 3000
+var path = require("path")
+//app.use('/static', express.static(path.join(__dirname, 'nodejsexercise')))
 
-app.use(bodyParser.json())
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-)
+const db = require('./queries')
+const port =8000
+
+const request = require('request');
+
 
 app.get('/', (request, response) => {
-  response.json({ info: 'Node.js, Express, and Postgres API' })
+ 
+ response.sendFile(path.join( __dirname,'fe', 'front.html' ));
 })
 
 app.get('/users', db.getUsers)
+app.post('/users1', db.createUser)
+app.post('/Actors1',db.createActor)
+app.put('/Actor/:actor_id', db.updateActor)
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
 })
-app.post('/users1', db.createUser)

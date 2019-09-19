@@ -1,14 +1,25 @@
 {
   "name": "nodejsexercise",
   "version": "1.0.0",
-  "description": "",
+  "description": "hi",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.7.8",
+    "express": "^4.17.1",
+    "pg": "^7.12.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deetchiga/nodejs.git"
+  },
+  "author": "deetchiga <deechi.moni@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deetchiga/nodejs/issues"
+  },
+  "homepage": "https://github.com/deetchiga/nodejs#readme"
 }
